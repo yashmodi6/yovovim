@@ -73,6 +73,7 @@ rmdir /s /q "%LOCALAPPDATA%\nvim-data"
 * [windwp/nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag)
 * [NMAC427/guess-indent.nvim](https://github.com/NMAC427/guess-indent.nvim)
 * [echasnovski/mini.move](https://github.com/echasnovski/mini.move)
+* [echasnovski/mini.pairs](https://github.com/echasnovski/mini.pairs)
 * [kevinhwang91/nvim-ufo](https://github.com/kevinhwang91/nvim-ufo)
 * [kevinhwang91/promise-async](https://github.com/kevinhwang91/promise-async)
 
