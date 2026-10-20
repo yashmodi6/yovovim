@@ -1,0 +1,81 @@
+return {
+  "folke/snacks.nvim",
+  priority = 1000,
+  lazy = false,
+  init = function()
+    vim.g.snacks_animate = false
+  end,
+  opts = {
+    scroll = { enabled = false },
+    bigfile = { enabled = true },
+    dim = {
+      scope = {
+        min_size = 5,
+        max_size = 40,
+        siblings = true,
+      },
+    },
+    picker = {
+      enabled = true,
+      sources = {
+        colorschemes = {
+          transform = function(item)
+            if not item.file or not item.text then
+              return false
+            end
+            if item.file:find(vim.env.VIMRUNTIME, 1, true) then
+              return false
+            end
+          end,
+        },
+      },
+      icons = {
+        git = {
+          enabled = true,
+          commit = "󰜘 ",
+          staged = "S",
+          added = "A",
+          deleted = "D",
+          ignored = "!",
+          modified = "M",
+          renamed = "R",
+          unmerged = "U",
+          untracked = "?",
+        },
+      },
+    },
+    dashboard = {
+      enabled = true,
+      preset = {
+        header = [[
+██╗   ██╗ ██████╗ ██╗   ██╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
+╚██╗ ██╔╝██╔═══██╗██║   ██║██╔═══██╗██║   ██║██║████╗ ████║
+ ╚████╔╝ ██║   ██║██║   ██║██║   ██║██║   ██║██║██╔████╔██║
+  ╚██╔╝  ██║   ██║╚██╗ ██╔╝██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
+   ██║   ╚██████╔╝ ╚████╔╝ ╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
+   ╚═╝    ╚═════╝   ╚═══╝   ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝]],
+      },
+    },
+    explorer = {
+      enabled = true,
+      replace_netrw = true,
+    },
+    indent = {
+      enabled = true,
+    },
+    words = { enabled = true },
+    terminal = {
+      enabled = true,
+      win = {
+        position = "float",
+        border = "single",
+        height = 0.8,
+        width = 0.8,
+      },
+    },
+    statuscolumn = {
+      enabled = true,
+      folds = { open = true },
+    },
+  },
+}

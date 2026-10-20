@@ -1,0 +1,29 @@
+return {
+  "nvim-treesitter/nvim-treesitter",
+  event = { "BufReadPost", "BufNewFile" },
+  cmd = { "TSUpdate", "TSInstall", "TSLog", "TSUninstall" },
+  build = ":TSUpdate",
+  config = function()
+    local ts = require "nvim-treesitter"
+    ts.setup()
+
+    -- Automatically install and track common parsers
+    ts.install {
+      "lua",
+      "vim",
+      "vimdoc",
+      "query",
+      "markdown",
+      "markdown_inline",
+      "json",
+      "yaml",
+      "toml",
+      "bash",
+      "html",
+      "css",
+      "javascript",
+      "typescript",
+      "tsx",
+    }
+  end,
+}
