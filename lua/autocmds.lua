@@ -45,6 +45,4 @@ if vim.env.TERMUX_VERSION or vim.fn.has "termux" == 1 then
     group = vim.api.nvim_create_augroup("DisableItalicsTermux", { clear = true }),
     callback = disable_italics,
   })
-
-  disable_italics()
 end

@@ -7,6 +7,8 @@ return {
   end,
   opts = {
     scroll = { enabled = false },
+    quickfile = { enabled = true },
+    input = { enabled = true },
     bigfile = { enabled = true },
     dim = {
       scope = {

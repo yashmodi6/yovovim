@@ -9,4 +9,9 @@ return {
     event = "InsertEnter",
     opts = {},
   },
+  {
+    "echasnovski/mini.surround",
+    event = { "BufReadPost", "BufNewFile" },
+    opts = {},
+  },
 }

@@ -14,7 +14,7 @@ g.loaded_ruby_provider = 0
 opt.number = true
 opt.relativenumber = true
 opt.cursorline = true
-opt.cursorlineopt = "number"
+opt.cursorlineopt = "both"
 opt.scrolloff = 8
 opt.smoothscroll = true
 opt.virtualedit = "block"
@@ -37,6 +37,7 @@ opt.inccommand = "split"
 
 -- Appearance
 opt.termguicolors = true
+opt.background = "dark"
 opt.showmode = false
 opt.ruler = false
 opt.shortmess:append "sI"
